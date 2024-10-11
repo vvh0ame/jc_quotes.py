@@ -1,10 +1,14 @@
-# jc_quotes.py
+# jc_quotes.js
 Web-API for [jcquotes.com](https://www.jcquotes.com) website that gives random james clear quotes
 
 ## Example
-```python
-import jc_quotes
-jc_quotes = jc_quotes.JCQuotes()
-random_quote = jc_quotes.get_random_quote()
-print(random_quote)
+```JavaScript
+async function main() {
+	const { JcQuotes } = require("./jc_quotes.js")
+	const jcQuotes = new JcQuotes()
+	const randomQuote = await jcQuotes.getRandomQuote()
+	console.log(randomQuote)
+}
+
+main()
 ```
